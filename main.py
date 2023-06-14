@@ -33,7 +33,7 @@ def electronics(size, lights):
                             lights = lights                           
                            )
 
-# Calculation
+# Hesaplama
 @app.route('/<size>/<lights>/<device>')
 def end(size, lights, device):
     return render_template('end.html', 
