@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta
+    name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+  >
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../static/css/style.css">
+  <title>Energy efficiency calculator for smart homes</title>
+</head>
+<body>
+  <header class="header">
+    <div class="header__text">
+      <h1>Calculate the energy efficiency of your home!</h1>
+      <p>Take the initiative and resolve the problem of excessive energy consumption!</p>
+    </div>
+  </header>
+  <main>
+    {% block content %}
+    <h2 class="main__title">Select how many lamps are there in your house:</h2>
+    <ul class="list" id="list">
+      <li class="list__item">
+        <a href={{size + "/3" }}>
+          <img class="item__img" src="../static/img/light.svg" alt="light">
+          <span>2-4 lamps</span></a>
+      </li>
+      <!--Assignment #2 -->
+      <li class="list__item">
+        <a href="{{Set a route with the coefficient of 7}}"> 
+          <img class="item__img" src="../static/img/light.svg" alt="light">
+          <span>4-6 lamps</span></a>
+      </li>
+      <li class="list__item">
+        <a href="{{Set the route with the coefficient of 10}}">
+          <img class="item__img" src="../static/img/light.svg" alt="light">
+          <span>8+ lamps</span></a>
+      </li>
+    </ul>
+    {% endblock %}
+  </main>
+  <footer>
+
+  </footer>
+</body>
+</html>
