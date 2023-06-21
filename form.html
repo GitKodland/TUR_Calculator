@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta
+    name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+  >
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../../static/css/style.css"> 
+  <title>Energy efficiency calculator for smart homes</title>
+</head>
+<body>
+  <header class="header">
+    <div class="header__text">
+      <h1>Calculate the energy efficiency of your home!</h1>
+      <p>Take the initiative and resolve the problem of excessive energy consumption!</p>
+    </div>
+  </header>
+  <main>
+    {% block content %}
+    <form action="{{ url_for('submit_form') }}" method="post" class="form">
+      <div class="user">
+        <ul class="user-info">
+            <li class="user-info__item">
+
+                <label for="name">Your name</label>
+                <input type="text" name="name" id="name" placeholder="Enter your full name" required>
+            </li>
+            <li class="user-info__item">
+                <!-- Assignment 4. Create an input field for the user's email -->
+                
+            </li>
+        </ul>
+        <!--Fields for the address and the name-->
+        <ul class="address-date">
+            <li class="user-info__item">
+
+                <label for="address">Specify your address</label>
+                <input type="text" name="address" id="address" placeholder="Your address" required>
+            </li>
+            <li class="user-info__item">
+
+                <label for="date">Specify the date when you are comfortable with our specialists arriving</label>
+                <input type="date" name="date" id="date" required>
+            </li>
+        </ul>
+    </div>
+    <button class="button" type="submit">Ready!</button>
+    </form>
+    {% endblock %}
+  </main>
+  <footer>
+
+  </footer>
+</body>
+</html>
